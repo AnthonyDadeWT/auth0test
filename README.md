@@ -1,2 +1,2 @@
 # auth0test
- Auth0 Test PRoject
+ Auth0 Test Project
