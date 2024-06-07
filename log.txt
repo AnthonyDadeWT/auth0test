@@ -1,0 +1,232 @@
+Verbose mode enabled. More logs will be printed.
+$ flutter --suppress-analytics --no-version-check pub deps --style=list
+Received test target: /Users/anthonydade/Documents/testEnviornment/auth0test/integration_test/auth0_test.dart
+Generated entrypoint /Users/anthonydade/Documents/testEnviornment/auth0test/integration_test/test_bundle.dart for development
+$ flutter --no-version-check --suppress-analytics devices --machine
+Received device: iPhone 15 Plus
+$ xcrun simctl listapps 921FE819-E99C-45FC-919E-886349BC6F77
+Received 12 --dart-define(s) (0 custom, 12 internal)
+Received internal --dart-define: PATROL_WAIT=0
+Received internal --dart-define: PATROL_APP_PACKAGE_NAME=com.example.auth0test
+Received internal --dart-define: PATROL_APP_BUNDLE_ID=com.example.auth0test
+Received internal --dart-define: PATROL_MACOS_APP_BUNDLE_ID=com.example.macos.MyApp
+Received internal --dart-define: PATROL_ANDROID_APP_NAME=My App
+Received internal --dart-define: PATROL_IOS_APP_NAME=My App
+Received internal --dart-define: INTEGRATION_TEST_SHOULD_REPORT_RESULTS_TO_NATIVE=false
+Received internal --dart-define: PATROL_TEST_LABEL_ENABLED=true
+Received internal --dart-define: PATROL_HOT_RESTART=true
+Received internal --dart-define: PATROL_IOS_INSTALLED_APPS=["com.anonymous.testProject2","com.apple.Bridge","com.apple.DocumentsApp","com.apple.Health","com.apple.Maps","com.apple.MobileAddressBook","com.apple.MobileSMS","com.apple.Passbook","com.apple.Preferences","com.apple.PreviewShell","com.apple.freeform","com.apple.mobilecal","com.apple.mobilesafari","com.apple.mobileslideshow","com.apple.news","com.apple.reminders","com.apple.shortcuts","com.apple.webapp","com.example.myequifax.RunnerUITests.xctrunner","com.facebook.WebDriverAgentRunner.xctrunner","com.flap.flapapp.prod.xctrunner","com.flutter.testProject2","host.exp.Exponent"]
+Received internal --dart-define: PATROL_TEST_SERVER_PORT=8081
+Received internal --dart-define: PATROL_APP_SERVER_PORT=8082
+• Building app with entrypoint test_bundle.dart for iOS simulator (debug)...
+$ flutter build ios --no-version-check --suppress-analytics --config-only --no-codesign --debug --simulator --target /Users/anthonydade/Documents/testEnviornment/auth0test/integration_test/test_bundle.dart --dart-define PATROL_WAIT=0 --dart-define PATROL_APP_PACKAGE_NAME=com.example.auth0test --dart-define PATROL_APP_BUNDLE_ID=com.example.auth0test --dart-define PATROL_MACOS_APP_BUNDLE_ID=com.example.macos.MyApp --dart-define PATROL_ANDROID_APP_NAME=My App --dart-define PATROL_IOS_APP_NAME=My App --dart-define INTEGRATION_TEST_SHOULD_REPORT_RESULTS_TO_NATIVE=false --dart-define PATROL_TEST_LABEL_ENABLED=true --dart-define PATROL_HOT_RESTART=true --dart-define PATROL_IOS_INSTALLED_APPS=["com.anonymous.testProject2","com.apple.Bridge","com.apple.DocumentsApp","com.apple.Health","com.apple.Maps","com.apple.MobileAddressBook","com.apple.MobileSMS","com.apple.Passbook","com.apple.Preferences","com.apple.PreviewShell","com.apple.freeform","com.apple.mobilecal","com.apple.mobilesafari","com.apple.mobileslideshow","com.apple.news","com.apple.reminders","com.apple.shortcuts","com.apple.webapp","com.example.myequifax.RunnerUITests.xctrunner","com.facebook.WebDriverAgentRunner.xctrunner","com.flap.flapapp.prod.xctrunner","com.flutter.testProject2","host.exp.Exponent"] --dart-define PATROL_TEST_SERVER_PORT=8081 --dart-define PATROL_APP_SERVER_PORT=8082
+	Building com.example.auth0test for simulator (ios)...
+$ xcodebuild build-for-testing -workspace Runner.xcworkspace -scheme Runner -configuration Debug -sdk iphonesimulator -destination generic/platform=iOS Simulator -quiet -derivedDataPath ../build/ios_integ OTHER_SWIFT_FLAGS=$(inherited) -D PATROL_ENABLED
+	/Users/anthonydade/Documents/testEnviornment/auth0test/ios/Pods/Pods.xcodeproj: warning: The iOS Simulator deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 9.0, but the range of supported deployment target versions is 12.0 to 17.0.99. (in target 'CocoaAsyncSocket' from project 'Pods')
+	note: Run script build phase 'Run Script' will be run during every build because the option to run the script phase "Based on dependency analysis" is unchecked. (in target 'Runner' from project 'Runner')
+	note: Run script build phase 'Thin Binary' will be run during every build because the option to run the script phase "Based on dependency analysis" is unchecked. (in target 'Runner' from project 'Runner')
+	warning: Run script build phase 'xcode_backend embed_and_thin' will be run during every build because it does not specify any outputs. To address this warning, either add output dependencies to the script phase, or configure it to run in every build by unchecking "Based on dependency analysis" in the script phase. (in target 'RunnerUITests' from project 'Runner')
+	warning: Run script build phase 'xcode_backend build' will be run during every build because it does not specify any outputs. To address this warning, either add output dependencies to the script phase, or configure it to run in every build by unchecking "Based on dependency analysis" in the script phase. (in target 'RunnerUITests' from project 'Runner')
+✓ Completed building app with entrypoint test_bundle.dart for iOS simulator (31.9s)
+Will uninstall apps before running tests
+$ xcrun simctl uninstall 921FE819-E99C-45FC-919E-886349BC6F77 com.example.auth0test
+$ xcrun simctl uninstall 921FE819-E99C-45FC-919E-886349BC6F77 com.example.auth0test.RunnerUITests.xctrunner
+• Running app with entrypoint test_bundle.dart for iOS simulator on simulator iPhone 15 Plus...
+$ xcodebuild -showsdks -json
+Interactive shell mode enabled.
+Logs: waiting for them...
+$ flutter --no-version-check --suppress-analytics logs --device-id 921FE819-E99C-45FC-919E-886349BC6F77
+$ flutter attach --no-version-check --suppress-analytics --debug --device-id 921FE819-E99C-45FC-919E-886349BC6F77 --app-id com.example.auth0test --target /Users/anthonydade/Documents/testEnviornment/auth0test/integration_test/test_bundle.dart --dart-define PATROL_WAIT=0 --dart-define PATROL_APP_PACKAGE_NAME=com.example.auth0test --dart-define PATROL_APP_BUNDLE_ID=com.example.auth0test --dart-define PATROL_MACOS_APP_BUNDLE_ID=com.example.macos.MyApp --dart-define PATROL_ANDROID_APP_NAME=My App --dart-define PATROL_IOS_APP_NAME=My App --dart-define INTEGRATION_TEST_SHOULD_REPORT_RESULTS_TO_NATIVE=false --dart-define PATROL_TEST_LABEL_ENABLED=true --dart-define PATROL_HOT_RESTART=true --dart-define PATROL_IOS_INSTALLED_APPS=["com.anonymous.testProject2","com.apple.Bridge","com.apple.DocumentsApp","com.apple.Health","com.apple.Maps","com.apple.MobileAddressBook","com.apple.MobileSMS","com.apple.Passbook","com.apple.Preferences","com.apple.PreviewShell","com.apple.freeform","com.apple.mobilecal","com.apple.mobilesafari","com.apple.mobileslideshow","com.apple.news","com.apple.reminders","com.apple.shortcuts","com.apple.webapp","com.example.myequifax.RunnerUITests.xctrunner","com.facebook.WebDriverAgentRunner.xctrunner","com.flap.flapapp.prod.xctrunner","com.flutter.testProject2","host.exp.Exponent"] --dart-define PATROL_TEST_SERVER_PORT=8081 --dart-define PATROL_APP_SERVER_PORT=8082
+Hot Restart: waiting for attach to the app...
+	: Waiting for a connection from Flutter on iPhone 15 Plus...
+Assuming SDK version 17.0 for iphonesimulator
+Looking for .xctestrun matching Runner_*iphonesimulator17.0*.xctestrun at /Users/anthonydade/Documents/testEnviornment/auth0test/build/ios_integ/Build/Products
+Found 1 match(es), the first one will be used
+Found /Users/anthonydade/Documents/testEnviornment/auth0test/build/ios_integ/Build/Products/Runner_iphonesimulator17.0-arm64-x86_64.xctestrun
+$ xcodebuild test-without-building -xctestrun /Users/anthonydade/Documents/testEnviornment/auth0test/build/ios_integ/Build/Products/Runner_iphonesimulator17.0-arm64-x86_64.xctestrun -only-testing RunnerUITests/RunnerUITests -destination platform=iOS Simulator,name=iPhone 15 Plus -destination-timeout 1 -resultBundlePath /Users/anthonydade/Documents/testEnviornment/auth0test/build/ios_results_1717727602516.xcresult
+	Command line invocation:
+	    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild test-without-building -xctestrun /Users/anthonydade/Documents/testEnviornment/auth0test/build/ios_integ/Build/Products/Runner_iphonesimulator17.0-arm64-x86_64.xctestrun -only-testing RunnerUITests/RunnerUITests -destination "platform=iOS Simulator,name=iPhone 15 Plus" -destination-timeout 1 -resultBundlePath /Users/anthonydade/Documents/testEnviornment/auth0test/build/ios_results_1717727602516.xcresult
+	
+	User defaults from command line:
+	    IDEBuildOperationResultBundlePath = /Users/anthonydade/Documents/testEnviornment/auth0test/build/ios_results_1717727602516.xcresult
+	    IDEPackageSupportUseBuiltinSCM = YES
+	
+	Writing result bundle at path:
+		/Users/anthonydade/Documents/testEnviornment/auth0test/build/ios_results_1717727602516.xcresult
+	
+Hot Restart: logs connected
+	Showing iPhone 15 Plus logs:
+	2024-06-06 22:33:26.537274-0400 RunnerUITests-Runner[6015:1865905] [Default] Running tests...
+	Running tests...
+	2024-06-06 22:33:28.467701-0400 RunnerUITests-Runner[6015:1865905] PatrolServer: INFO: PatrolServer constructor called
+	2024-06-06 22:33:28.467843-0400 RunnerUITests-Runner[6015:1865905] PatrolServer: INFO: PATROL_ENABLED flag is defined
+	2024-06-06 22:33:28.470247-0400 RunnerUITests-Runner[6015:1865905] PatrolServer: INFO: Starting server...
+	2024-06-06 22:33:28.474131-0400 RunnerUITests-Runner[6015:1865905] PatrolServer: INFO: Server started on http://0.0.0.0:8081
+	2024-06-06 22:33:28.474388-0400 RunnerUITests-Runner[6015:1865905] PatrolAppServiceClient: created, port: 8082
+	    t =      nans Checking existence of `"Allow" Button`
+	    t =      nans Open com.example.auth0test
+	    t =      nans     Launch com.example.auth0test
+	    t =      nans         Setting up automation session
+	    t =      nans         Wait for com.example.auth0test to idle
+	[ERROR:flutter/shell/platform/darwin/graphics/FlutterDarwinContextMetalImpeller.mm(42)] Using the Impeller rendering backend.
+	The Dart VM service is listening on http://127.0.0.1:60261/XuMzNO4qWps=/
+	Patrol (native): NativeAutomatorClient created, port: 8081
+	Patrol (native): initialize() started
+	Patrol (native): initialize() succeeded
+	PatrolBinding: Register Patrol service extensions
+	Patrol (native): NativeAutomatorClient created, port: 8081
+	Patrol (native): NativeAutomatorClient created, port: 8081
+	00:00 +0: auth0_test counter state is the same after going to home and switching apps
+	Patrol (native): configure() started
+	Patrol (native): configure() succeeded
+	Patrol (native): tap() started
+	2024-06-06 22:33:31.251067-0400 RunnerUITests-Runner[6015:1865905] PatrolServer: INFO: tapping on view with text 'Continue' in app com.apple.springboard...
+	2024-06-06 22:33:31.251893-0400 RunnerUITests-Runner[6015:1865905] PatrolServer: INFO: waiting for existence of view with text 'Continue' in app com.apple.springboard
+	    t =      nans Get all elements bound by index for: Elements matching predicate 'label == "Continue" OR title == "Continue"'
+	    t =      nans Checking existence of `Any (Element at index 0)`
+	    t =      nans Find the Any (Element at index 0)
+	    t =      nans Tap "Continue" Button
+	    t =      nans     Wait for com.apple.springboard to idle
+	    t =      nans     Find the "Continue" Button
+	    t =      nans     Check for interrupting elements affecting "Continue" Button
+	    t =      nans     Synthesize event
+	    t =      nans     Wait for com.apple.springboard to idle
+	2024-06-06 22:33:31.958151-0400 RunnerUITests-Runner[6015:1865905] PatrolServer: INFO: done tapping on view with text 'Continue' in app com.apple.springboard
+	2024-06-06 22:33:31.959508-0400 RunnerUITests-Runner[6015:1865905] PatrolServer: INFO: result: ()
+	Patrol (native): tap() succeeded
+	: Syncing files to device iPhone 15 Plus...                           3.6s
+	: 
+Hot Restart: attached to the app (press "r" to restart)
+	: Flutter run key commands.
+	: r Hot reload. 🔥🔥🔥
+	: R Hot restart.
+	: h List all available interactive commands.
+	: d Detach (terminate "flutter run" but leave application running).
+	: c Clear the screen
+	: q Quit (terminate the application on the device).
+	: 
+	: A Dart VM Service on iPhone 15 Plus is available at: http://127.0.0.1:60280/SGZpL00yJ2Y=/
+Patrol DevTools extension is available at http://127.0.0.1:9102/patrol_ext?uri=http://127.0.0.1:60280/SGZpL00yJ2Y=/
+	: The Flutter DevTools debugger and profiler on iPhone 15 Plus is available at: http://127.0.0.1:9102?uri=http://127.0.0.1:60280/SGZpL00yJ2Y=/
+	Patrol (native): enterText() started
+	2024-06-06 22:33:36.968264-0400 RunnerUITests-Runner[6015:1865905] PatrolServer: INFO: entering text "hello
+	" into text field in app com.example.auth0test...
+	2024-06-06 22:33:36.973911-0400 RunnerUITests-Runner[6015:1865905] *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: 'Unable to parse the format string ""'
+	*** First throw call stack:
+	(
+		0   CoreFoundation                      0x00000001804658a8 __exceptionPreprocess + 172
+		1   libobjc.A.dylib                     0x000000018005c09c objc_exception_throw + 56
+		2   Foundation                          0x0000000180d948cc +[NSPredicate predicateWithFormat:argumentArray:] + 164
+		3   patrol                              0x00000001074b4dc4 $sSo11NSPredicateC6format13argumentArrayABSS_SayypGSgtcfCTO + 164
+		4   patrol                              0x00000001074b4c0c $s6patrol8SelectorV22toTextFieldNSPredicateSo0F0CyF + 3548
+		5   patrol                              0x00000001075581d8 $s6patrol12IOSAutomatorC9enterText_2on5inApp15dismissKeyboard11withTimeoutySS_AA8SelectorVSSSbSdSgtKFyyKcfU_Tf2nnnnnii_n + 244
+		6   patrol                              0x000000010756749c $s6patrol12IOSAutomatorC9enterText_2on5inApp15dismissKeyboard11withTimeoutySS_AA8Selecto
+	*** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: 'Unable to parse the format string ""'
+	*** First throw call stack:
+	(
+		0   CoreFoundation                      0x00000001804658a8 __exceptionPreprocess + 172
+		1   libobjc.A.dylib                     0x000000018005c09c objc_exception_throw + 56
+		2   Foundation                          0x0000000180d948cc +[NSPredicate predicateWithFormat:argumentArray:] + 164
+		3   patrol                              0x00000001074b4dc4 $sSo11NSPredicateC6format13argumentArrayABSS_SayypGSgtcfCTO + 164
+		4   patrol                              0x00000001074b4c0c $s6patrol8SelectorV22toTextFieldNSPredicateSo0F0CyF + 3548
+		5   patrol                              0x00000001075581d8 $s6patrol12IOSAutomatorC9enterText_2on5inApp15dismissKeyboard11withTimeoutySS_AA8SelectorVSSSbSdSgtKFyyKcfU_Tf2nnnnnii_n + 244
+		6   patrol                              0x000000010756749c $s6patrol12IOSAutomatorC9enterText_2on5inApp15dismissKeyboard11withTimeoutySS_AA8SelectorVSSSbSdSgtKFyyKcfU_Tf2nnnnnii_nTA + 80
+		7   patrol                              0x0000000107567680 $s6patrol12IOSAutomatorC9runAction33_A38BC33CB40D8AB5899B3E680ED20DE4LL_5blockxSS_xyKctKlFxyKXEfU_ + 468
+		8   patrol                              0x000000010756dddc $s6patrol12IOSAutomatorC9runAction33_A38BC33CB40D8AB5899B3E680ED20DE4LL_5blockxSS_xyKctKlFxyKXEfU_TA + 48
+		9   libswiftDispatch.dylib              0x00000001a4785f48 $sxs5Error_pIgrzo_xsAA_pIegrzo_lTRTA + 20
+		10  libswiftDispatch.dylib              0x00000001a4786360 $sxs5Error_pIgrzo_xsAA_pIegrzo_lTRTA.64 + 12
+		11  libswiftDispatch.dylib              0x00000001a478396c $sSo17OS_dispatch_queueC8DispatchE11_syncHelper33_F417D752D2C4E9330E1C700411CE0C6ALL2fn7execute6rescuexyyyXEXE_xyKXExs5Error_pKXEtKlFyxyKcXEfU_yyXEfU_ + 108
+		12  libswiftDispatch.dylib              0x00000001a4785ec4 $sIg_Ieg_TRTA + 20
+		13  libswiftDispatch.dylib              0x00000001a4783718 $sIeg_IyB_TR + 20
+		14  libdispatch.dylib                   0x0000000180143d3c _dispatch_client_callout + 16
+		15  libdispatch.dylib                   0x0000000180153a48 _dispatch_async_and_wait_invoke + 112
+		16  libdispatch.dylib                   0x0000000180143d3c _dispatch_client_callout + 16
+		17  libdispatch.dylib                   0x0000000180152b24 _dispatch_main_queue_drain + 1272
+		18  libdispatch.dylib                   0x000000018015261c _dispatch_main_queue_callback_4CF + 40
+		19  CoreFoundation                      0x00000001803c61b4 __CFRUNLOOP_IS_SERVICING_THE_MAIN_DISPATCH_QUEUE__ + 12
+		20  CoreFoundation                      0x00000001803c08cc __CFRunLoopRun + 1936
+		21  CoreFoundation                      0x00000001803bfd28 CFRunLoopRunSpecific + 572
+		22  Foundation                          0x0000000180dafa98 -[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 208
+		23  Foundation                          0x0000000180dafcbc -[NSRunLoop(NSRunLoop) runUntilDate:] + 60
+		24  RunnerUITests                       0x00000001027e1f0c +[RunnerUITests testInvocations] + 1072
+		25  XCTestCore                          0x00000001036314dc +[XCTestCase _testInvocationDescriptors] + 72
+		26  XCTestCore                          0x0000000103614900 +[XCTestSuite testSuiteForTestCaseClass:] + 276
+		27  XCTestCore                          0x0000000103617604 +[XCTestSuite prepareContainerSuite:toRunTestIdentifiers:] + 376
+		28  XCTestCore                          0x00000001036173e4 +[XCTestSuite testClassSuitesForTestIdentifiers:skippingTestIdentifiers:randomNumberGenerator:] + 172
+		29  XCTestCore                          0x0000000103616dd0 -[XCTestSuite _initWithTestConfiguration:] + 752
+		30  XCTestCore                          0x0000000103617308 +[XCTestSuite testSuiteForTestConfiguration:] + 44
+		31  XCTestCore                          0x00000001035e1f1c __53-[XCTTestRunSession initWithTestConfiguration:error:]_block_invoke_2 + 64
+		32  XCTestCore                          0x00000001036132b0 +[XCTContext _runInChildOfContext:forTestCase:markAsReportingBase:block:] + 172
+		33  XCTestCore                          0x00000001036131b0 +[XCTContext runInContextForTestCase:markAsReportingBase:block:] + 100
+		34  XCTestCore                          0x00000001035e1eb4 __53-[XCTTestRunSession initWithTestConfiguration:error:]_block_invoke + 96
+		35  XCTestCore                          0x00000001035e1b40 +[XCTTestRunSession performTestSuiteConstructionInBlock:] + 56
+		36  XCTestCore                          0x00000001035e1d54 -[XCTTestRunSession initWithTestConfiguration:error:] + 200
+		37  XCTestCore                          0x00000001035e311c -[XCTTestRunSessionProvider executionExtensionWithTestConfiguration:reportingSession:completion:] + 80
+		38  XCTestCore                          0x00000001035e83d0 __128+[XCTExtensionProvider(XCTExecutionExtension_Internal) allExecutionExtensionsWithTestConfiguration:reportingSession:completion:]_block_invoke + 120
+		39  XCTestCore                          0x0000000103626b1c __69-[NSArray(XCTestAdditions) xct_arrayByApplyingAsyncBlock:completion:]_block_invoke + 156
+		40  XCTestCore                          0x0000000103626cdc __XCTAsyncEnumerate_block_invoke.18 + 52
+		41  XCTestCore                          0x00000001036268cc -[NSArray(XCTestAdditions) xct_arrayByApplyingAsyncBlock:completion:] + 632
+		42  XCTestCore                          0x00000001035e8268 +[XCTExtensionProvider allExecutionExtensionsWithTestConfiguration:reportingSession:completion:] + 288
+		43  XCTestCore                          0x000000010360f624 -[XCTestDriver _runTests] + 564
+		44  XCTestCore                          0x00000001035e1080 _XCTestMain + 88
+		45  RunnerUITests-Runner                0x00000001023d9b38 -[_XCTRunnerAppDelegate application:didFinishLaunchingWithOptions:] + 0
+		46  RunnerUITests-Runner                0x00000001023d9ad4 _XCTRunnerRunTests + 0
+		47  CoreFoundation                      0x00000001803c6464 __CFRUNLOOP_IS_CALLING_OUT_TO_A_BLOCK__ + 20
+		48  CoreFoundation                      0x00000001803c5bac __CFRunLoopDoBlocks + 352
+		49  CoreFoundation                      0x00000001803c0450 __CFRunLoopRun + 788
+		50  CoreFoundation                      0x00000001803bfd28 CFRunLoopRunSpecific + 572
+		51  GraphicsServices                    0x000000018986ebc0 GSEventRunModal + 160
+		52  UIKitCore                           0x000000010b5a3fdc -[UIApplication _run] + 868
+		53  UIKitCore                           0x000000010b5a7c54 UIApplicationMain + 124
+		54  RunnerUITests-Runner                0x00000001023d9d98 main + 160
+		55  dyld                                0x0000000102545558 start_sim + 20
+		56  ???                                 0x000000010261a0e0 0x0 + 4334919904
+		57  ???                                 0x0758000000000000 0x0 + 529172956216033280
+	)
+	libc++abi: terminating due to uncaught exception of type NSException
+	Patrol (native): enterText() failed
+	══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+	The following ClientException was thrown running a test:
+	Connection closed before full header was received, uri=http://localhost:8081/enterText
+	flutter:
+	When the exception was thrown, this was the stack:
+	#0      IOClient.send (package:http/src/io_client.dart:156:7)
+	<asynchronous suspension>
+	#1      BaseClient._sendUnstreamed (package:http/src/base_client.dart:93:32)
+	<asynchronous suspension>
+	<asynchronous suspension>
+	#3      NativeAutomatorClient._sendRequest (package:patrol/src/native/contracts/native_automator_client.dart:320:22)
+	<asynchronous suspension>
+	#4      NativeAutomator._wrapRequest (package:patrol/src/native/native_automator.dart:219:22)
+	<asynchronous suspension>
+	#5      NativeAutomator.enterText (package:patrol/src/native/native_automator.dart:602:5)
+	<asynchronous suspension>
+	#6      main.<anonymous closure> (file:///Users/anthonydade/Documents/testEnviornment/auth0test/integration_test/auth0_test.dart:26:7)
+	<asynchronous suspension>
+	#7      patrolTest.<anonymous closure> (package:patrol/src/common.dart:134:7)
+	<asynchronous suspension>
+	#8      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:183:15)
+	<asynchronous suspension>
+	#9      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1017:5)
+	<asynchronous suspension>
+	#10     TestWidgetsFlutterBinding._createTestCompletionHandler.<anonymous closure> (package:flutter_test/src/binding.dart:808:12)
+	<asynchronous suspension>
+	(elided one frame from dart:async)
+	flutter:
+	The test description was:
+	  counter state is the same after going to home and switching apps
+	════════════════════════════════════════════════════════════════════════════════════════════════════
+	00:06 +0: auth0_test counter state is the same after going to home and switching apps [E]
+	  Test failed. See exception logs above.
+	  The test description was: counter state is the same after going to home and switching apps
+	flutter:
+	00:06 +0 -1: Some tests failed.
+	: Lost connection to device.
+	
+	Test session results, code coverage, and logs:
+		/Users/anthonydade/Documents/testEnviornment/auth0test/build/ios_results_1717727602516.xcresult
+	
+	Testing started
+✓ App shut down on request (33.2s)
+$ xcrun simctl uninstall 921FE819-E99C-45FC-919E-886349BC6F77 com.example.auth0test
+$ xcrun simctl uninstall 921FE819-E99C-45FC-919E-886349BC6F77 com.example.auth0test.RunnerUITests.xctrunner
