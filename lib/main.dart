@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:auth0_flutter/auth0_flutter.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,6 +41,16 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  Credentials? _credentials;
+
+  late Auth0 auth0;
+
+  @override
+  void initState() {
+    super.initState();
+    auth0 = Auth0('dev-r26l4wh8iyhci4l3.us.auth0.com', '24huWIsgIEiLMw3HO9I1spXHYxxaJ0PM');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,6 +69,20 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            ElevatedButton(
+              key: ValueKey("auth0login"),
+              onPressed: () async {
+                // Use a Universal Link callback URL on iOS 17.4+ / macOS 14.4+
+                // useHTTPS is ignored on Android
+                final credentials =
+                    await auth0.webAuthentication().login(useHTTPS: true);
+
+                setState(() {
+                  _credentials = credentials;
+                });
+              },
+              child: const Text("Log in with auth0")
+            )
           ],
         ),
       ),

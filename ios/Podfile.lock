@@ -1,29 +1,50 @@
 PODS:
+  - Auth0 (2.7.2):
+    - JWTDecode (~> 3.1)
+    - SimpleKeychain (~> 1.1)
+  - auth0_flutter (1.7.2):
+    - Auth0 (= 2.7.2)
+    - Flutter
+    - FlutterMacOS
+    - JWTDecode (= 3.1.0)
+    - SimpleKeychain (= 1.1.0)
   - CocoaAsyncSocket (7.6.5)
   - Flutter (1.0.0)
+  - JWTDecode (3.1.0)
   - patrol (0.0.1):
     - CocoaAsyncSocket (~> 7.6)
     - Flutter
     - FlutterMacOS
+  - SimpleKeychain (1.1.0)
 
 DEPENDENCIES:
+  - auth0_flutter (from `.symlinks/plugins/auth0_flutter/darwin`)
   - Flutter (from `Flutter`)
   - patrol (from `.symlinks/plugins/patrol/darwin`)
 
 SPEC REPOS:
   trunk:
+    - Auth0
     - CocoaAsyncSocket
+    - JWTDecode
+    - SimpleKeychain
 
 EXTERNAL SOURCES:
+  auth0_flutter:
+    :path: ".symlinks/plugins/auth0_flutter/darwin"
   Flutter:
     :path: Flutter
   patrol:
     :path: ".symlinks/plugins/patrol/darwin"
 
 SPEC CHECKSUMS:
+  Auth0: 28cb24cb19ebd51f0b07751f16d83b59f4019532
+  auth0_flutter: f085572268059bc194c7b023d7f432f5ebb72413
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  JWTDecode: 3eaab1e06b6f4dcbdd6716aff09ba4c2104ca8b7
   patrol: 3e21d514020dbee24b3e3383caac9e8e051292ac
+  SimpleKeychain: f8707c8e97b38c6a6e687b17732afc9bcef06439
 
 PODFILE CHECKSUM: 03036a5cdf23c16d6dae6ef0b69fa4ec45908bb8
 
